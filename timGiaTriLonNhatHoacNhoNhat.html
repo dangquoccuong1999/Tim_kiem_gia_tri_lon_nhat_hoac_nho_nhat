@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function min(arrNumber) {
+        let min = arrNumber[0];
+        for (let i = 1; i < arrNumber.length; i++) {
+            if (min > arrNumber[i]){
+                min = arrNumber[i]
+            }
+        }
+        return min;
+    }
+    
+    function arrRandom() {
+        let arr = [];
+        for (let i=0; i<100; i++){
+            arr[i] = Math.floor(Math.random()*100);
+        }
+        let min_ = min(arr);
+        document.write(arr + "<br>");
+        document.write(min_ + "<br>");
+    }
+    arrRandom();
+</script>
+</body>
+</html>
